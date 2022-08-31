@@ -16,7 +16,7 @@
   button.addEventListener("click", (event) => {
     try {
       const textArea = document.querySelector(".textarea");
-      window.open(`/view-json?q=${JSON.stringify(JSON.parse(textArea.value))}`);
+      window.open(`view-json?q=${JSON.stringify(JSON.parse(textArea.value))}`);
     } catch (error) {
       event.target.innerText = "INVALID JSON!";
       console.log(error);
