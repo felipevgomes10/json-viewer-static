@@ -1,0 +1,29 @@
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  height: 100vh;
+  padding: 5rem;
+  background-color: #333;
+}
+
+.section textarea {
+  width: 100%;
+  max-width: 80rem;
+  height: 50rem;
+  font-size: 1.8rem;
+  padding: 1rem;
+  resize: none;
+  background-color: beige;
+}
+
+.section textarea:focus {
+  outline: none;
+}
+
+.section .button.primary {
+  width: 18.608rem;
+  height: 6.172rem;
+}
