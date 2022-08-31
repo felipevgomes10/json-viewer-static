@@ -17,7 +17,9 @@
     try {
       const textArea = document.querySelector(".textarea");
       window.open(
-        `/view-json.html?q=${JSON.stringify(JSON.parse(textArea.value))}`
+        `json-viewer-static/view-json?q=${JSON.stringify(
+          JSON.parse(textArea.value)
+        )}`
       );
     } catch (error) {
       event.target.innerText = "INVALID JSON!";
