@@ -20,7 +20,12 @@
   button.addEventListener("click", (event) => {
     try {
       const textArea = document.querySelector(".textarea");
-      window.open(`view-json?q=${JSON.stringify(JSON.parse(textArea.value))}`);
+      const timeStamp = String(Date.now());
+      window.sessionStorage.setItem(
+        timeStamp,
+        JSON.stringify(JSON.parse(textArea.value))
+      );
+      window.open(`view-json?q=${timeStamp}`);
     } catch (error) {
       event.target.innerText = "INVALID JSON!";
 

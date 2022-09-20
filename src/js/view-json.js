@@ -5,13 +5,14 @@
 
   const [query] = new URLSearchParams(window.location.search).values();
 
-  editor.set(JSON.parse(query));
+  const json = window.sessionStorage.getItem(query);
+  editor.set(JSON.parse(json));
 
   const copyButton = document.querySelector(".copy-button");
   copyButton.addEventListener("click", async (event) => {
     event.target.innerText = "COPING...";
     await navigator.clipboard.writeText(
-      JSON.stringify(JSON.parse(query), null, 2)
+      JSON.stringify(JSON.parse(json), null, 2)
     );
     event.target.innerText = "COPIED!";
     setTimeout(() => {
